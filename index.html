@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aether Voyages - Turismo Aeroespacial de Lujo. Explora destinos interplanetarios y reserva tu misión al cosmos.">
+    <title>Aether Voyages | Turismo Aeroespacial Privado</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/index.css">
+</head>
+
+<body>
+    <!-- ============================================
+         HEADER & NAVEGACIÓN
+    ============================================ -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <span class="logo__name">Aether</span>
+                <span class="logo__tagline">Voyages</span>
+            </a>
+
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="index.html" class="nav__link nav__link--active">Inicio</a></li>
+                <li><a href="pages/destinos.html" class="nav__link">Destinos</a></li>
+                <li><a href="pages/naves.html" class="nav__link">Flota</a></li>
+                <li><a href="pages/mision.html" class="nav__link">Misión</a></li>
+                <li><a href="pages/blog.html" class="nav__link">Blog</a></li>
+                <li><a href="pages/contacto.html" class="nav__link">Reserva</a></li>
+            </ul>
+
+            <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION  -->
+        <section class="hero" id="hero">
+            <div class="hero__video-container">
+                <video class="hero__video" autoplay muted loop playsinline poster="assets/images/hero-poster.jpg">
+                    <source src="assets/videos/hero-space.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="hero__overlay"></div>
+
+            <div class="hero__content">
+                <p class="hero__subtitle">Turismo Aeroespacial Privado</p>
+                <h1 class="hero__title">
+                    <span>Más allá del</span>
+                    <span>horizonte.</span>
+                </h1>
+                <a href="pages/contacto.html" class="hero__cta">Solicitar Itinerario</a>
+            </div>
+
+            <div class="hero__decoration" aria-hidden="true">
+                <svg class="hero__star" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L12 22M2 12L22 12M4.93 4.93L19.07 19.07M19.07 4.93L4.93 19.07" stroke="currentColor"
+                        stroke-width="1" stroke-linecap="round" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- SLIDESHOW DE NAVES -->
+        <section class="slideshow" id="flota">
+            <header class="slideshow__header">
+                <p class="section-label">Nuestra Flota</p>
+                <h2 class="section-title">Naves de Nueva Generación</h2>
+                <p class="section-description">
+                    Diseñadas para ofrecer la máxima seguridad y confort en los viajes más exclusivos del universo.
+                </p>
+            </header>
+
+            <div class="slideshow__container">
+                <input type="radio" name="slide" id="slide1" class="slideshow__radio" checked>
+                <input type="radio" name="slide" id="slide2" class="slideshow__radio">
+                <input type="radio" name="slide" id="slide3" class="slideshow__radio">
+
+                <div class="slideshow__track">
+                    <article class="slideshow__slide">
+                        <div class="slide-card">
+                            <figure class="slide-card__image">
+                                <img src="assets/images/nave-aurora.png"
+                                    alt="Nave Aurora - Vista exterior en órbita terrestre">
+                            </figure>
+                            <div class="slide-card__content">
+                                <p class="slide-card__category">Clase Explorador</p>
+                                <h3 class="slide-card__title">Aurora I</h3>
+                                <p class="slide-card__description">
+                                    Diseñada para expediciones a órbita baja terrestre. Perfecta para
+                                    una primera experiencia espacial con vistas panorámicas de la Tierra.
+                                </p>
+                                <dl class="slide-card__specs">
+                                    <div class="spec">
+                                        <dt class="spec__label">Capacidad</dt>
+                                        <dd class="spec__value">6 Pasajeros</dd>
+                                    </div>
+                                    <div class="spec">
+                                        <dt class="spec__label">Alcance</dt>
+                                        <dd class="spec__value">400 km</dd>
+                                    </div>
+                                    <div class="spec">
+                                        <dt class="spec__label">Duración</dt>
+                                        <dd class="spec__value">3 Días</dd>
+                                    </div>
+                                    <div class="spec">
+                                        <dt class="spec__label">Velocidad</dt>
+                                        <dd class="spec__value">28,000 km/h</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="slideshow__slide">
+                        <div class="slide-card">
+                            <figure class="slide-card__image">
+                                <img src="assets/images/nave-horizon.jpg" alt="Nave Horizon - Aproximación lunar">
+                            </figure>
+                            <div class="slide-card__content">
+                                <p class="slide-card__category">Clase Voyager</p>
+                                <h3 class="slide-card__title">Horizon X</h3>
+                                <p class="slide-card__description">
+                                    Nuestra nave insignia para viajes lunares. Equipada con suites de lujo
+                                    y observatorio panorámico de 360 grados.
+                                </p>
+                                <dl class="slide-card__specs">
+                                    <div class="spec">
+                                        <dt class="spec__label">Capacidad</dt>
+                                        <dd class="spec__value">12 Pasajeros</dd>
+                                    </div>
+                                    <div class="spec">
+                                        <dt class="spec__label">Alcance</dt>
+                                        <dd class="spec__value">384,400 km</dd>
+                                    </div>
+                                    <div class="spec">
+                                        <dt class="spec__label">Duración</dt>
+                                        <dd class="spec__value">7 Días</dd>
+                                    </div>
+                                    <div class="spec">
+                                        <dt class="spec__label">Velocidad</dt>
+                                        <dd class="spec__value">40,000 km/h</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="slideshow__slide">
+                        <div class="slide-card">
+                            <figure class="slide-card__image">
+                                <img src="assets/images/nave-nebula.jpg" alt="Nave Nebula - En ruta hacia Marte">
+                            </figure>
+                            <div class="slide-card__content">
+                                <p class="slide-card__category">Clase Interplanetaria</p>
+                                <h3 class="slide-card__title">Nebula Prime</h3>
+                                <p class="slide-card__description">
+                                    La joya de nuestra flota. Capacidad para misiones a Marte con
+                                    propulsión iónica avanzada y habitáculos autosuficientes.
+                                </p>
+                                <dl class="slide-card__specs">
+                                    <div class="spec">
+                                        <dt class="spec__label">Capacidad</dt>
+                                        <dd class="spec__value">24 Pasajeros</dd>
+                                    </div>
+                                    <div class="spec">
+                                        <dt class="spec__label">Alcance</dt>
+                                        <dd class="spec__value">225M km</dd>
+                                    </div>
+                                    <div class="spec">
+                                        <dt class="spec__label">Duración</dt>
+                                        <dd class="spec__value">180 Días</dd>
+                                    </div>
+                                    <div class="spec">
+                                        <dt class="spec__label">Velocidad</dt>
+                                        <dd class="spec__value">100,000 km/h</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="slideshow__controls">
+                    <label for="slide1" class="slideshow__control" aria-label="Ver nave Aurora">
+                        <span class="slideshow__control-text">Aurora I</span>
+                    </label>
+                    <label for="slide2" class="slideshow__control" aria-label="Ver nave Horizon">
+                        <span class="slideshow__control-text">Horizon X</span>
+                    </label>
+                    <label for="slide3" class="slideshow__control" aria-label="Ver nave Nebula">
+                        <span class="slideshow__control-text">Nebula Prime</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__brand">
+                <a href="index.html" class="logo logo--footer">
+                    <span class="logo__name">Aether</span>
+                    <span class="logo__tagline">Voyages</span>
+                </a>
+                <p class="footer__description">
+                    Pioneros en turismo aeroespacial de lujo. Hacemos realidad
+                    el sueño de explorar el cosmos.
+                </p>
+            </div>
+
+            <nav class="footer__nav" aria-label="Enlaces de exploración">
+                <h4 class="footer__title">Explorar</h4>
+                <ul class="footer__links">
+                    <li><a href="pages/destinos.html" class="footer__link">Destinos</a></li>
+                    <li><a href="pages/naves.html" class="footer__link">Nuestra Flota</a></li>
+                    <li><a href="pages/mision.html" class="footer__link">Preparación</a></li>
+                    <li><a href="pages/blog.html" class="footer__link">Noticias</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer__nav" aria-label="Enlaces de compañía">
+                <h4 class="footer__title">Compañía</h4>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Sobre Nosotros</a></li>
+                    <li><a href="#" class="footer__link">Seguridad</a></li>
+                    <li><a href="#" class="footer__link">Sostenibilidad</a></li>
+                    <li><a href="#" class="footer__link">Carreras</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer__nav" aria-label="Enlaces de contacto">
+                <h4 class="footer__title">Contacto</h4>
+                <ul class="footer__links">
+                    <li><a href="pages/contacto.html" class="footer__link">Reservar Viaje</a></li>
+                    <li><a href="#" class="footer__link">Soporte</a></li>
+                    <li><a href="#" class="footer__link">Prensa</a></li>
+                    <li><a href="#" class="footer__link">Inversores</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2026 Aether Voyages. Todos los derechos reservados.</p>
+            <ul class="footer__legal">
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Términos</a></li>
+                <li><a href="#">Cookies</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Script mínimo para menú hamburguesa -->
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        const header = document.getElementById('header');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('nav__menu--active');
+            navToggle.setAttribute('aria-expanded', isOpen);
+            navToggle.classList.toggle('nav__toggle--active');
+        });
+
+        navMenu.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('nav__menu--active');
+                navToggle.classList.remove('nav__toggle--active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

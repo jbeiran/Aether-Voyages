@@ -1,0 +1,18 @@
+/* ================================================
+   Este archivo importa todos los estilos compartidos.
+   ================================================ */
+
+/* Base */
+@import url('base/variables.css');
+@import url('base/reset.css');
+@import url('base/typography.css');
+
+/* Layout (compartido en todas las páginas) */
+@import url('layout/header.css');
+@import url('layout/footer.css');
+
+/* Componentes reutilizables */
+@import url('components/buttons.css');
+
+/* Responsive global */
+@import url('utilities/responsive.css');
