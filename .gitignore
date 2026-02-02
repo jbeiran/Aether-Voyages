@@ -1,0 +1,23 @@
+# Dependencias
+node_modules/
+vendor/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# Variables de entorno
+.env
+.env.local
+
+# Logs
+*.log
+
+# Build/dist
+dist/
+build/
