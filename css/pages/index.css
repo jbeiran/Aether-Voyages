@@ -1,0 +1,371 @@
+/* ================================================
+   INDEX.HTML - Estilos Específicos
+   ================================================
+   Incluye: Hero con video + Slideshow de naves
+   Solo cargar este archivo en index.html
+   ================================================ */
+
+/* ------------------------------------------------
+   HERO SECTION
+   ------------------------------------------------ */
+   .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Video de fondo */
+.hero__video-container {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+}
+
+.hero__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay oscuro */
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        135deg,
+        rgba(8, 8, 12, 0.6) 0%,
+        rgba(8, 8, 12, 0.3) 40%,
+        rgba(8, 8, 12, 0.4) 70%,
+        rgba(8, 8, 12, 0.8) 100%
+    );
+}
+
+/* Contenido del hero */
+.hero__content {
+    text-align: center;
+    padding: 0 var(--space-lg);
+    animation: heroFadeIn 1s var(--transition-slow) forwards;
+    opacity: 0;
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero__subtitle {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-md);
+}
+
+.hero__title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    margin-bottom: var(--space-xl);
+}
+
+.hero__title span {
+    display: block;
+}
+
+/* CTA del hero (usa clase .btn de components) */
+.hero__cta {
+    /* Hereda de .btn--outline */
+}
+
+/* Elemento decorativo - Estrella */
+.hero__decoration {
+    position: absolute;
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+}
+
+.hero__star {
+    width: 24px;
+    height: 24px;
+    color: var(--color-text-muted);
+    animation: rotateStar 20s linear infinite;
+}
+
+@keyframes rotateStar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ------------------------------------------------
+   SLIDESHOW DE NAVES (CSS PURO)
+   ------------------------------------------------ */
+.slideshow {
+    padding: var(--space-3xl) var(--space-lg);
+    background: var(--color-bg-secondary);
+}
+
+/* Ocultar inputs radio */
+.slideshow__radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.slideshow__container {
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow__track {
+    display: flex;
+    transition: transform var(--transition-slower);
+}
+
+/* Control del slideshow mediante radio buttons */
+#slide1:checked ~ .slideshow__track {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .slideshow__track {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slideshow__track {
+    transform: translateX(-200%);
+}
+
+.slideshow__slide {
+    min-width: 100%;
+    padding: 0 var(--space-sm);
+}
+
+/* Card de cada slide */
+.slide-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    background: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.slide-card__image {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.slide-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slower);
+}
+
+.slide-card:hover .slide-card__image img {
+    transform: scale(1.05);
+}
+
+.slide-card__content {
+    padding: var(--space-xl);
+    padding-left: 0;
+}
+
+.slide-card__category {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+}
+
+.slide-card__title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+}
+
+.slide-card__description {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-lg);
+}
+
+/* Especificaciones */
+.slide-card__specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+}
+
+.spec {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.spec__label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.spec__value {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Controles del slideshow */
+.slideshow__controls {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.slideshow__control {
+    padding: var(--space-sm) var(--space-md);
+    cursor: pointer;
+    position: relative;
+}
+
+.slideshow__control-text {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+}
+
+.slideshow__control::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    transition: width var(--transition-base);
+}
+
+.slideshow__control:hover .slideshow__control-text {
+    color: var(--color-text-secondary);
+}
+
+/* Estado activo de los controles */
+#slide1:checked ~ .slideshow__controls .slideshow__control:nth-child(1) .slideshow__control-text,
+#slide2:checked ~ .slideshow__controls .slideshow__control:nth-child(2) .slideshow__control-text,
+#slide3:checked ~ .slideshow__controls .slideshow__control:nth-child(3) .slideshow__control-text {
+    color: var(--color-text-primary);
+}
+
+#slide1:checked ~ .slideshow__controls .slideshow__control:nth-child(1)::after,
+#slide2:checked ~ .slideshow__controls .slideshow__control:nth-child(2)::after,
+#slide3:checked ~ .slideshow__controls .slideshow__control:nth-child(3)::after {
+    width: 100%;
+}
+
+/* ------------------------------------------------
+   RESPONSIVE - Index específico
+   ------------------------------------------------ */
+@media (max-width: 1024px) {
+    .slide-card {
+        grid-template-columns: 1fr;
+    }
+
+    .slide-card__image {
+        height: 300px;
+    }
+
+    .slide-card__content {
+        padding: var(--space-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hero mobile */
+    .hero__content {
+        padding: 0 var(--space-md);
+    }
+
+    .hero__title {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .hero__subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 0.25em;
+    }
+
+    .hero__decoration {
+        bottom: var(--space-md);
+        right: var(--space-md);
+    }
+
+    /* Slideshow mobile */
+    .slideshow {
+        padding: var(--space-2xl) var(--space-md);
+    }
+
+    .slide-card__image {
+        height: 220px;
+    }
+
+    .slide-card__title {
+        font-size: 1.75rem;
+    }
+
+    .slide-card__description {
+        font-size: 0.9rem;
+    }
+
+    .slide-card__specs {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-sm);
+    }
+
+    .slideshow__controls {
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+    }
+
+    .slideshow__control {
+        padding: var(--space-xs) var(--space-sm);
+    }
+
+    .slideshow__control-text {
+        font-size: 0.65rem;
+    }
+}
