@@ -50,10 +50,7 @@
             visibility var(--transition-base);
     }
 
-    .nav__menu--active {
-        opacity: 1;
-        visibility: visible;
-    }
+    /* El menú se muestra con .nav__checkbox:checked ~ .nav__menu en header.css */
 
     .nav__link {
         font-size: 1.25rem;
