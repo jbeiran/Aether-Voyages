@@ -1,9 +1,3 @@
-/* ================================================
-   TIPOGRAFÍA GLOBAL
-   ================================================
-   Clases reutilizables para títulos y texto.
-   ================================================ */
-
 .section-label {
     font-family: var(--font-body);
     font-size: 0.75rem;

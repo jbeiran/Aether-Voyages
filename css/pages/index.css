@@ -1,14 +1,4 @@
-/* ================================================
-   INDEX.HTML - Estilos Específicos
-   ================================================
-   Incluye: Hero con video + Slideshow de naves
-   Solo cargar este archivo en index.html
-   ================================================ */
-
-/* ------------------------------------------------
-   HERO SECTION
-   ------------------------------------------------ */
-   .hero {
+.hero {
     position: relative;
     height: 100vh;
     min-height: 600px;
@@ -18,7 +8,6 @@
     overflow: hidden;
 }
 
-/* Video de fondo */
 .hero__video-container {
     position: absolute;
     inset: 0;
@@ -31,21 +20,19 @@
     object-fit: cover;
 }
 
-/* Overlay oscuro */
 .hero__overlay {
     position: absolute;
     inset: 0;
     z-index: -1;
     background: linear-gradient(
-        135deg,
-        rgba(8, 8, 12, 0.6) 0%,
-        rgba(8, 8, 12, 0.3) 40%,
-        rgba(8, 8, 12, 0.4) 70%,
-        rgba(8, 8, 12, 0.8) 100%
+        to bottom,
+        rgba(8, 8, 12, 0.5) 0%,
+        rgba(8, 8, 12, 0.65) 40%,
+        rgba(8, 8, 12, 0.7) 70%,
+        rgba(8, 8, 12, 0.85) 100%
     );
 }
 
-/* Contenido del hero */
 .hero__content {
     text-align: center;
     padding: 0 var(--space-lg);
@@ -58,6 +45,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -67,11 +55,12 @@
 .hero__subtitle {
     font-family: var(--font-body);
     font-size: 0.85rem;
-    font-weight: 400;
+    font-weight: 900;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     color: var(--color-accent);
     margin-bottom: var(--space-md);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
 .hero__title {
@@ -82,18 +71,28 @@
     line-height: 1.05;
     letter-spacing: 0.02em;
     margin-bottom: var(--space-xl);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
 .hero__title span {
     display: block;
 }
 
-/* CTA del hero (usa clase .btn de components) */
 .hero__cta {
-    /* Hereda de .btn--outline */
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-primary);
+    background: var(--color-accent);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    transition: background var(--transition-base);
+    display: inline-block;
+    text-decoration: none;
 }
 
-/* Elemento decorativo - Estrella */
 .hero__decoration {
     position: absolute;
     bottom: var(--space-lg);
@@ -108,19 +107,20 @@
 }
 
 @keyframes rotateStar {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-/* ------------------------------------------------
-   SLIDESHOW DE NAVES (CSS PURO)
-   ------------------------------------------------ */
 .slideshow {
     padding: var(--space-3xl) var(--space-lg);
     background: var(--color-bg-secondary);
 }
 
-/* Ocultar inputs radio */
 .slideshow__radio {
     position: absolute;
     opacity: 0;
@@ -139,16 +139,15 @@
     transition: transform var(--transition-slower);
 }
 
-/* Control del slideshow mediante radio buttons */
-#slide1:checked ~ .slideshow__track {
+#slide1:checked~.slideshow__track {
     transform: translateX(0);
 }
 
-#slide2:checked ~ .slideshow__track {
+#slide2:checked~.slideshow__track {
     transform: translateX(-100%);
 }
 
-#slide3:checked ~ .slideshow__track {
+#slide3:checked~.slideshow__track {
     transform: translateX(-200%);
 }
 
@@ -157,7 +156,6 @@
     padding: 0 var(--space-sm);
 }
 
-/* Card de cada slide */
 .slide-card {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -216,7 +214,6 @@
     margin-bottom: var(--space-lg);
 }
 
-/* Especificaciones */
 .slide-card__specs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -245,7 +242,6 @@
     font-weight: 500;
 }
 
-/* Controles del slideshow */
 .slideshow__controls {
     display: flex;
     justify-content: center;
@@ -284,22 +280,18 @@
     color: var(--color-text-secondary);
 }
 
-/* Estado activo de los controles */
-#slide1:checked ~ .slideshow__controls .slideshow__control:nth-child(1) .slideshow__control-text,
-#slide2:checked ~ .slideshow__controls .slideshow__control:nth-child(2) .slideshow__control-text,
-#slide3:checked ~ .slideshow__controls .slideshow__control:nth-child(3) .slideshow__control-text {
+#slide1:checked~.slideshow__controls .slideshow__control:nth-child(1) .slideshow__control-text,
+#slide2:checked~.slideshow__controls .slideshow__control:nth-child(2) .slideshow__control-text,
+#slide3:checked~.slideshow__controls .slideshow__control:nth-child(3) .slideshow__control-text {
     color: var(--color-text-primary);
 }
 
-#slide1:checked ~ .slideshow__controls .slideshow__control:nth-child(1)::after,
-#slide2:checked ~ .slideshow__controls .slideshow__control:nth-child(2)::after,
-#slide3:checked ~ .slideshow__controls .slideshow__control:nth-child(3)::after {
+#slide1:checked~.slideshow__controls .slideshow__control:nth-child(1)::after,
+#slide2:checked~.slideshow__controls .slideshow__control:nth-child(2)::after,
+#slide3:checked~.slideshow__controls .slideshow__control:nth-child(3)::after {
     width: 100%;
 }
 
-/* ------------------------------------------------
-   RESPONSIVE - Index específico
-   ------------------------------------------------ */
 @media (max-width: 1024px) {
     .slide-card {
         grid-template-columns: 1fr;
@@ -315,7 +307,6 @@
 }
 
 @media (max-width: 768px) {
-    /* Hero mobile */
     .hero__content {
         padding: 0 var(--space-md);
     }
@@ -334,7 +325,6 @@
         right: var(--space-md);
     }
 
-    /* Slideshow mobile */
     .slideshow {
         padding: var(--space-2xl) var(--space-md);
     }
