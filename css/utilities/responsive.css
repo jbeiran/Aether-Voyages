@@ -49,9 +49,7 @@
         transition: opacity var(--transition-base),
             visibility var(--transition-base);
     }
-
-    /* El menú se muestra con .nav__checkbox:checked ~ .nav__menu en header.css */
-
+    
     .nav__link {
         font-size: 1.25rem;
         letter-spacing: 0.2em;
