@@ -7,11 +7,7 @@
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: color var(--transition-base),
-        background var(--transition-base),
-        border-color var(--transition-base);
+    transition: all 0.3s ease;
 }
 
 .btn--outline {
@@ -20,24 +16,9 @@
     background: transparent;
 }
 
-.btn--outline::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--color-text-primary);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform var(--transition-base);
-    z-index: -1;
-}
-
 .btn--outline:hover {
+    background: var(--color-text-primary);
     color: var(--color-bg-primary);
-}
-
-.btn--outline:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
 }
 
 .btn--outline-accent {
