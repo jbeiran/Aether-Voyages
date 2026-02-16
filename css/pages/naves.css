@@ -1,0 +1,318 @@
+/* Página de flota (naves) */
+.fleet {
+  padding: calc(var(--space-2xl)) var(--space-lg) var(--space-2xl);
+  background: var(--color-bg-primary);
+  min-height: 100vh;
+}
+
+.fleet__container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+}
+
+.fleet__header {
+  margin-bottom: var(--space-2xl);
+}
+
+/* Layout: tabla a la izquierda, aside a la derecha */
+.fleet__layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.fleet__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* Contenedor de la tabla con borde tipo “glow” */
+.fleet__table-wrapper {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+/* Tabla de especificaciones */
+.fleet-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+}
+
+.fleet-table th,
+.fleet-table td {
+  padding: var(--space-md) var(--space-sm);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.fleet-table th {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.fleet-table td {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.fleet-table__row {
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fleet-table__row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.fleet-table__row:last-child td {
+  border-bottom: none;
+}
+
+/* Columna Nave: imagen de la nave */
+.fleet-table__ship-img {
+  width: 64px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fleet-table__ship-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: filter 0.25s ease;
+}
+
+.fleet-table__row:hover .fleet-table__ship-img img {
+  filter: brightness(1.15);
+}
+
+/* Modelo en negrita */
+.fleet-table td:nth-child(2) {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+/* Bloque Características adicionales */
+.fleet__extra {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.fleet__extra-title {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.fleet__extra-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.fleet__extra-list li {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.fleet__extra-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+/* Aside: Datos curiosos */
+.fleet__aside {
+  position: sticky;
+  top: calc(80px + var(--space-md));
+}
+
+.fleet__aside-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.fleet__aside-card {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+/* Lista de datos curiosos */
+.curious-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.curious-facts__item {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+}
+
+.curious-facts__icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+}
+
+.curious-facts__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.curious-facts__item p {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .fleet {
+    padding: calc(var(--space-2xl) + 60px) var(--space-md) var(--space-xl);
+  }
+
+  .fleet__layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .fleet__aside {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .fleet {
+    padding: calc(var(--space-xl) + 60px) var(--space-md) var(--space-lg);
+  }
+
+  .fleet__table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .fleet-table {
+    min-width: 560px;
+  }
+
+  .fleet-table th,
+  .fleet-table td {
+    padding: var(--space-sm);
+    font-size: 0.85rem;
+  }
+
+  .fleet-table__ship-img {
+    width: 48px;
+    height: 30px;
+  }
+
+  .fleet__extra-title,
+  .fleet__aside-title {
+    font-size: 1rem;
+  }
+
+  .curious-facts__item p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Vista móvil: tabla como tarjetas apiladas */
+@media (max-width: 600px) {
+  .fleet-table thead {
+    display: none;
+  }
+
+  .fleet-table,
+  .fleet-table tbody,
+  .fleet-table tr,
+  .fleet-table td {
+    display: block;
+  }
+
+  .fleet-table tr {
+    margin-bottom: var(--space-md);
+    padding: var(--space-md);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+
+  .fleet-table td {
+    padding: var(--space-xs) 0;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .fleet-table td::before {
+    content: attr(data-label);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    min-width: 100px;
+  }
+
+  .fleet-table td:first-child {
+    justify-content: flex-start;
+    padding-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .fleet-table td:first-child::before {
+    content: "Nave";
+  }
+
+  .fleet-table__ship-img {
+    margin-right: var(--space-sm);
+  }
+}

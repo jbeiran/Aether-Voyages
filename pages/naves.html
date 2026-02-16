@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conoce la flota de Aether Voyages. Naves de última generación para viajes interplanetarios seguros y confortables."
+    />
+    <title>Flota | Aether Voyages</title>
+
+    <link
+      rel="shortcut icon"
+      href="../assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/pages/naves.css" />
+  </head>
+
+  <body>
+    <header class="header header--solid" id="header">
+      <nav class="nav">
+        <a href="../index.html" class="logo">
+          <span class="logo__name">Aether</span>
+          <span class="logo__tagline">Voyages</span>
+        </a>
+
+        <input type="checkbox" id="navToggle" class="nav__checkbox" />
+
+        <label for="navToggle" class="nav__toggle" aria-label="Abrir menú">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </label>
+
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="../index.html" class="nav__link">Inicio</a></li>
+          <li><a href="destinos.html" class="nav__link">Destinos</a></li>
+          <li>
+            <a href="naves.html" class="nav__link nav__link--active">Flota</a>
+          </li>
+          <li><a href="mision.html" class="nav__link">Misión</a></li>
+          <li><a href="blog.html" class="nav__link">Blog</a></li>
+          <li><a href="contacto.html" class="nav__link">Reserva</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <!-- SECCIÓN FLOTA -->
+      <section class="fleet">
+        <div class="fleet__container">
+          <header class="section-header fleet__header">
+            <p class="section-label">La Flota</p>
+            <h1 class="section-title">Fleet</h1>
+            <p class="section-description">
+              Naves de última generación diseñadas para misiones de larga
+              distancia. Cada modelo combina seguridad, eficiencia y confort.
+            </p>
+          </header>
+
+          <div class="fleet__layout">
+            <!-- Tabla de especificaciones técnicas -->
+            <div class="fleet__main">
+              <div class="fleet__table-wrapper">
+                <table class="fleet-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nave</th>
+                      <th scope="col">Modelo</th>
+                      <th scope="col">Tripulantes</th>
+                      <th scope="col">Carga</th>
+                      <th scope="col">Velocidad</th>
+                      <th scope="col">Capacidad</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="fleet-table__row">
+                      <td>
+                        <div class="fleet-table__ship-img">
+                          <img
+                            src="../assets/images/naves/orion-x.png"
+                            alt="Nave Orion X"
+                            loading="lazy"
+                          />
+                        </div>
+                      </td>
+                      <td data-label="Modelo">Orion X</td>
+                      <td data-label="Tripulantes">20</td>
+                      <td data-label="Carga">106 t</td>
+                      <td data-label="Velocidad">28.1 L.p.h</td>
+                      <td data-label="Capacidad">100 personas</td>
+                    </tr>
+                    <tr class="fleet-table__row">
+                      <td>
+                        <div class="fleet-table__ship-img">
+                          <img
+                            src="../assets/images/naves/nova-7.png"
+                            alt="Nave Nova 7"
+                            loading="lazy"
+                          />
+                        </div>
+                      </td>
+                      <td data-label="Modelo">Nova 7</td>
+                      <td data-label="Tripulantes">20</td>
+                      <td data-label="Carga">113 t</td>
+                      <td data-label="Velocidad">28.1 L.p.h</td>
+                      <td data-label="Capacidad">110 personas</td>
+                    </tr>
+                    <tr class="fleet-table__row">
+                      <td>
+                        <div class="fleet-table__ship-img">
+                          <img
+                            src="../assets/images/naves/nova-6.png"
+                            alt="Nave Nova 6"
+                            loading="lazy"
+                          />
+                        </div>
+                      </td>
+                      <td data-label="Modelo">Nova 6</td>
+                      <td data-label="Tripulantes">15</td>
+                      <td data-label="Carga">105 t</td>
+                      <td data-label="Velocidad">26.4 L.p.h</td>
+                      <td data-label="Capacidad">80 personas</td>
+                    </tr>
+                    <tr class="fleet-table__row">
+                      <td>
+                        <div class="fleet-table__ship-img">
+                          <img
+                            src="../assets/images/naves/nova-10.png"
+                            alt="Nave Nova 10"
+                            loading="lazy"
+                          />
+                        </div>
+                      </td>
+                      <td data-label="Modelo">Nova 10</td>
+                      <td data-label="Tripulantes">18</td>
+                      <td data-label="Carga">115 t</td>
+                      <td data-label="Velocidad">29.2 L.p.h</td>
+                      <td data-label="Capacidad">120 personas</td>
+                    </tr>
+                    <tr class="fleet-table__row">
+                      <td>
+                        <div class="fleet-table__ship-img">
+                          <img
+                            src="../assets/images/naves/titan-v.png"
+                            alt="Nave Titan V"
+                            loading="lazy"
+                          />
+                        </div>
+                      </td>
+                      <td data-label="Modelo">Titan V</td>
+                      <td data-label="Tripulantes">40</td>
+                      <td data-label="Carga">100 t</td>
+                      <td data-label="Velocidad">30.0 L.p.h</td>
+                      <td data-label="Capacidad">4 módulos</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Características adicionales -->
+              <div class="fleet__extra">
+                <h2 class="fleet__extra-title">Características adicionales</h2>
+                <ul class="fleet__extra-list">
+                  <li>
+                    Propulsión iónica de alta eficiencia para trayectos largos.
+                  </li>
+                  <li>
+                    Escudos térmicos de última generación para reentrada segura.
+                  </li>
+                  <li>
+                    Sistemas de soporte vital redundantes en todas las naves.
+                  </li>
+                  <li>Cápsulas de escape autónomas para cada tripulante.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Aside: Datos curiosos -->
+            <aside class="fleet__aside">
+              <h2 class="fleet__aside-title">Datos curiosos</h2>
+              <div class="fleet__aside-card">
+                <ul class="curious-facts">
+                  <li class="curious-facts__item">
+                    <span class="curious-facts__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="../assets/icons/datos-curiosos.svg#icono-orion"></use>
+                      </svg>
+                    </span>
+                    <p>
+                      La flota Orion fue la primera en completar un vuelo
+                      tripulado a Marte sin escalas en 2038.
+                    </p>
+                  </li>
+                  <li class="curious-facts__item">
+                    <span class="curious-facts__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="../assets/icons/datos-curiosos.svg#icono-paneles"></use>
+                      </svg>
+                    </span>
+                    <p>
+                      Las naves Nova utilizan paneles solares desplegables que
+                      generan energía incluso en órbita marciana.
+                    </p>
+                  </li>
+                  <li class="curious-facts__item">
+                    <span class="curious-facts__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="../assets/icons/datos-curiosos.svg#icono-reloj"></use>
+                      </svg>
+                    </span>
+                    <p>
+                      El tiempo medio de preparación de una misión desde reserva
+                      hasta despegue es de 18 meses.
+                    </p>
+                  </li>
+                  <li class="curious-facts__item">
+                    <span class="curious-facts__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="../assets/icons/datos-curiosos.svg#icono-escudo"></use>
+                      </svg>
+                    </span>
+                    <p>
+                      Todas las naves cuentan con certificación internacional de
+                      seguridad espacial nivel 5.
+                    </p>
+                  </li>
+                  <li class="curious-facts__item">
+                    <span class="curious-facts__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="../assets/icons/datos-curiosos.svg#icono-casco"></use>
+                      </svg>
+                    </span>
+                    <p>
+                      El casco del Titan V está fabricado con aleaciones que
+                      resisten micrometeoritos a 40 km/s.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <a href="../index.html" class="logo logo--footer">
+            <span class="logo__name">Aether</span>
+            <span class="logo__tagline">Voyages</span>
+          </a>
+          <p class="footer__description">
+            Pioneros en turismo aeroespacial de lujo. Hacemos realidad el sueño
+            de explorar el cosmos.
+          </p>
+        </div>
+
+        <nav class="footer__nav">
+          <h4 class="footer__title">Explorar</h4>
+          <ul class="footer__links">
+            <li><a href="destinos.html" class="footer__link">Destinos</a></li>
+            <li>
+              <a href="naves.html" class="footer__link">Nuestra Flota</a>
+            </li>
+            <li>
+              <a href="mision.html" class="footer__link">Preparación</a>
+            </li>
+            <li><a href="blog.html" class="footer__link">Noticias</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; 2026 Aether Voyages. Todos los derechos reservados.
+        </p>
+        <ul class="footer__legal">
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
