@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Artículos y noticias sobre descubrimientos espaciales, tecnología de exploración y avances de Aether Voyages."
+    />
+    <title>Blog | Aether Voyages</title>
+
+    <link
+      rel="shortcut icon"
+      href="../assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/pages/blog.css" />
+  </head>
+
+  <body>
+    <header class="header header--solid" id="header">
+      <nav class="nav">
+        <a href="../index.html" class="logo">
+          <span class="logo__name">Aether</span>
+          <span class="logo__tagline">Voyages</span>
+        </a>
+
+        <input type="checkbox" id="navToggle" class="nav__checkbox" />
+
+        <label for="navToggle" class="nav__toggle" aria-label="Abrir menú">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </label>
+
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="../index.html" class="nav__link">Inicio</a></li>
+          <li><a href="destinos.html" class="nav__link">Destinos</a></li>
+          <li><a href="naves.html" class="nav__link">Flota</a></li>
+          <li><a href="mision.html" class="nav__link">Misión</a></li>
+          <li>
+            <a href="blog.html" class="nav__link nav__link--active">Blog</a>
+          </li>
+          <li><a href="contacto.html" class="nav__link">Reserva</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="blog">
+        <div class="blog__container">
+          <!-- Cabecera de página -->
+          <header class="blog__header">
+            <h1 class="blog__title">Blog</h1>
+            <p class="blog__subtitle">Noticias</p>
+          </header>
+
+          <div class="blog__layout">
+            <div class="blog__articles">
+              <!-- Artículos destacados -->
+              <div class="blog__featured">
+                <article class="post-card post-card--featured">
+                  <a href="#" class="post-card__link">
+                    <figure class="post-card__image">
+                      <img
+                        src="../assets/images/blog/deep-space.png"
+                        alt="Vista del espacio profundo con estrellas y nebulosas"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div class="post-card__body">
+                      <h2 class="post-card__title">Más Allá del Horizonte.</h2>
+                      <p class="post-card__excerpt">
+                        Científicos de Aether confirman el descubrimiento de un
+                        exoplaneta en la zona habitable de Próxima Centauri. Las
+                        primeras imágenes revelan una atmósfera rica en oxígeno
+                        y vastos océanos de agua líquida.
+                      </p>
+                      <time class="post-card__date" datetime="2026-01-15">
+                        Ene 15, 2026
+                      </time>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="post-card post-card--featured">
+                  <a href="#" class="post-card__link">
+                    <figure class="post-card__image">
+                      <img
+                        src="../assets/images/blog/quantum-propulsion.png"
+                        alt="Nave espacial con motor de propulsión cuántica"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div class="post-card__body">
+                      <h2 class="post-card__title">
+                        Tecnología de Levitación Cuántica.
+                      </h2>
+                      <p class="post-card__excerpt">
+                        Estamos trabajando en la implementación de la tecnología
+                        de levitación cuántica en nuestras naves espaciales.
+                        Esto nos permitirá viajar a velocidades cercanas a la de
+                        la luz sin necesidad de combustible.
+                      </p>
+                      <time class="post-card__date" datetime="2026-01-10">
+                        Ene 10, 2026
+                      </time>
+                    </div>
+                  </a>
+                </article>
+              </div>
+
+              <!-- Artículos regulares -->
+              <div class="blog__grid">
+                <article class="post-card">
+                  <a href="#" class="post-card__link">
+                    <figure class="post-card__image">
+                      <img
+                        src="../assets/images/blog/terraforming.png"
+                        alt="Concepto artístico de terraformación marciana"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div class="post-card__body">
+                      <h2 class="post-card__title">
+                        Terraformación: El Nuevo Hogar.
+                      </h2>
+                      <p class="post-card__excerpt">
+                        La Terraformación es la creación de un nuevo mundo en el que la vida pueda prosperar. 
+                        Es una tecnología que permite convertir un planeta inóspito en un mundo habitable.
+                        Aether Voyages está trabajando en la implementación de la Terraformación en Marte.
+                      </p>
+                      <time class="post-card__date" datetime="2025-12-22">
+                        Mar 11, 2025
+                      </time>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="post-card">
+                  <a href="#" class="post-card__link">
+                    <figure class="post-card__image">
+                      <img
+                        src="../assets/images/blog/lunar-discovery.png"
+                        alt="Astronauta explorando la superficie lunar"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div class="post-card__body">
+                      <h2 class="post-card__title">
+                        Más Allá del Horizonte Lunar.
+                      </h2>
+                      <p class="post-card__excerpt">
+                        En los cielos de la Luna, descubrimos una nueva forma de
+                        vida. Los primeros humanos que pisaron la Luna,
+                        descubrieron que la Luna es un mundo vivo y lleno de
+                        vida.
+                      </p>
+                      <time class="post-card__date" datetime="2026-01-18">
+                        Ene 18, 2026
+                      </time>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </div>
+
+            <!-- Barra lateral -->
+            <aside class="blog__sidebar">
+              <div class="sidebar-widget">
+                <h3 class="sidebar-widget__title">Categorías</h3>
+                <ul class="sidebar-widget__list">
+                  <li>
+                    <a href="#" class="sidebar-widget__link">Noticias</a>
+                  </li>
+                  <li>
+                    <a href="#" class="sidebar-widget__link">Tecnología</a>
+                  </li>
+                  <li>
+                    <a href="#" class="sidebar-widget__link">Logros</a>
+                  </li>
+                  <li>
+                    <a href="#" class="sidebar-widget__link">Innovación</a>
+                  </li>
+                  <li>
+                    <a href="#" class="sidebar-widget__link">Hábitat</a>
+                  </li>
+                  <li>
+                    <a href="#" class="sidebar-widget__link">Misiones</a>
+                  </li>
+                  <li>
+                    <a href="#" class="sidebar-widget__link">Viajes</a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <a href="../index.html" class="logo logo--footer">
+            <span class="logo__name">Aether</span>
+            <span class="logo__tagline">Voyages</span>
+          </a>
+          <p class="footer__description">
+            Pioneros en turismo aeroespacial de lujo. Hacemos realidad el sueño
+            de explorar el cosmos.
+          </p>
+        </div>
+
+        <nav class="footer__nav">
+          <h4 class="footer__title">Explorar</h4>
+          <ul class="footer__links">
+            <li><a href="destinos.html" class="footer__link">Destinos</a></li>
+            <li>
+              <a href="naves.html" class="footer__link">Nuestra Flota</a>
+            </li>
+            <li>
+              <a href="mision.html" class="footer__link">Preparación</a>
+            </li>
+            <li><a href="blog.html" class="footer__link">Noticias</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; 2026 Aether Voyages. Todos los derechos reservados.
+        </p>
+        <ul class="footer__legal">
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
