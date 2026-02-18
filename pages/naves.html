@@ -69,7 +69,12 @@
           </header>
 
           <div class="fleet__layout">
-            <!-- Tabla de especificaciones técnicas -->
+            <!--
+              Tabla de especificaciones técnicas.
+              En móvil (<600px) la tabla se transforma en tarjetas
+              apiladas ocultando el thead y usando data-label en cada
+              td para mostrar las etiquetas con el pseudo-elemento ::before.
+            -->
             <div class="fleet__main">
               <div class="fleet__table-wrapper">
                 <table class="fleet-table">
@@ -186,7 +191,8 @@
               </div>
             </div>
 
-            <!-- Aside: Datos curiosos -->
+            <!-- Aside con position: sticky para que acompañe el scroll
+                 junto a la tabla principal. En tablet se apila debajo. -->
             <aside class="fleet__aside">
               <h2 class="fleet__aside-title">Datos curiosos</h2>
               <div class="fleet__aside-card">
@@ -279,6 +285,18 @@
               <a href="mision.html" class="footer__link">Preparación</a>
             </li>
             <li><a href="blog.html" class="footer__link">Noticias</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__nav">
+          <h4 class="footer__title">Recursos</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="https://www.nasa.gov" target="_blank" rel="noopener noreferrer" class="footer__link">NASA</a>
+            </li>
+            <li>
+              <a href="https://www.esa.int" target="_blank" rel="noopener noreferrer" class="footer__link">ESA</a>
+            </li>
           </ul>
         </nav>
       </div>

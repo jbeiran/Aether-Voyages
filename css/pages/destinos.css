@@ -67,7 +67,12 @@
   color: var(--color-accent);
 }
 
-/* Overlay que aparece con hover */
+/*
+ * Overlay que aparece con hover: se muestra al pasar el ratón sobre
+ * la tarjeta (opacity 0→1). Cada hijo tiene un transition-delay
+ * incremental (0.05s, 0.1s, 0.15s, 0.2s, 0.25s) para crear una
+ * animación escalonada que da sensación de secuencia.
+ */
 .dest-card__overlay {
   position: absolute;
   inset: 0;

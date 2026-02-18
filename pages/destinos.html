@@ -74,7 +74,12 @@
             </p>
           </header>
 
-          <!-- Grid de tarjetas, cada una con hover que muestra info -->
+          <!--
+            GALERÍA DE DESTINOS: grid responsive (4→3→2→1 columnas).
+            Cada tarjeta tiene un overlay oculto (opacity: 0) que se
+            muestra con :hover. Los elementos internos del overlay
+            aparecen con animación escalonada usando transition-delay.
+          -->
           <div class="destinations__grid">
             <!-- Marte -->
             <article class="dest-card">
@@ -465,6 +470,18 @@
               <a href="mision.html" class="footer__link">Preparación</a>
             </li>
             <li><a href="blog.html" class="footer__link">Noticias</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__nav">
+          <h4 class="footer__title">Recursos</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="https://www.nasa.gov" target="_blank" rel="noopener noreferrer" class="footer__link">NASA</a>
+            </li>
+            <li>
+              <a href="https://www.esa.int" target="_blank" rel="noopener noreferrer" class="footer__link">ESA</a>
+            </li>
           </ul>
         </nav>
       </div>

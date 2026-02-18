@@ -1,3 +1,9 @@
+/*
+ * Header fijo con position: fixed para que siempre sea visible.
+ * El menú hamburguesa (móvil) funciona sin JavaScript: un input
+ * checkbox oculto actúa como toggle, y el selector hermano (~)
+ * controla la visibilidad y animación del menú.
+ */
 .header {
   position: fixed;
   top: 0;

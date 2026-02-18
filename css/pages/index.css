@@ -1,4 +1,7 @@
-/* Hero */
+/* Hero: ocupa el 100% del viewport. El vídeo se posiciona
+   con absolute y z-index negativo para quedar detrás del texto.
+   Un div overlay con gradiente oscurece la imagen y mejora
+   la legibilidad del texto superpuesto. */
 .hero {
   position: relative;
   height: 100vh;
@@ -118,7 +121,13 @@
   }
 }
 
-/* Slideshow */
+/*
+ * Slideshow solo con CSS (sin JavaScript).
+ * Usa inputs type="radio" ocultos como controladores de estado.
+ * Cuando un radio está :checked, el selector hermano (~) aplica
+ * un translateX al track para mostrar el slide correspondiente.
+ * Los labels en los controles actúan como botones de navegación.
+ */
 .slideshow {
   padding: var(--space-3xl) var(--space-lg);
   background: var(--color-bg-secondary);

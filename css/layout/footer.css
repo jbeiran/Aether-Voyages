@@ -1,3 +1,5 @@
+/* Footer responsive con CSS Grid: 4 columnas en escritorio,
+   2 en tablet y 1 en móvil (breakpoints en responsive.css). */
 .footer {
   background: var(--color-bg-tertiary);
   border-top: 1px solid var(--color-border);

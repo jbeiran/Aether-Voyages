@@ -150,7 +150,9 @@
   background: var(--color-accent);
 }
 
-/* Aside: Datos curiosos */
+/* Aside con position: sticky: se mantiene visible mientras el
+   usuario hace scroll por la tabla principal. El valor top tiene
+   en cuenta la altura del header fijo (80px) más un margen. */
 .fleet__aside {
   position: sticky;
   top: calc(80px + var(--space-md));
@@ -262,7 +264,10 @@
   }
 }
 
-/* Vista móvil: tabla como tarjetas apiladas */
+/* Vista móvil (<600px): la tabla cambia a tarjetas apiladas.
+   Se oculta el thead y cada td se muestra como bloque con su
+   etiqueta generada por el pseudo-elemento ::before usando el
+   atributo data-label del HTML. */
 @media (max-width: 600px) {
   .fleet-table thead {
     display: none;

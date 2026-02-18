@@ -1,10 +1,34 @@
-/* Tablet */
+/*
+ * Estrategia de breakpoints:
+ * - Escritorio (>1024px): layout completo, grids multicol, nav horizontal.
+ * - Tablet (≤1024px): se reduce espaciado, header compacto, grids con menos columnas.
+ * - Móvil (≤768px): menú hamburguesa, layouts en una columna, textos más pequeños.
+ * Cada página puede tener breakpoints adicionales en su propio archivo CSS.
+ */
+
+/* Tablet: primer breakpoint, se reduce espaciado y se adapta el header y footer */
 @media (max-width: 1024px) {
   :root {
     --space-lg: 2rem;
     --space-xl: 3rem;
     --space-2xl: 4rem;
     --space-3xl: 5rem;
+  }
+
+  .header {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .nav__menu {
+    gap: var(--space-md);
+  }
+
+  .nav__link {
+    font-size: 0.75rem;
+  }
+
+  .logo__name {
+    font-size: 1.5rem;
   }
 
   .footer__content {
@@ -19,7 +43,8 @@
   }
 }
 
-/* Movil */
+/* Móvil: segundo breakpoint, el nav pasa a menú hamburguesa
+   y los layouts se apilan en una columna */
 @media (max-width: 768px) {
   :root {
     --space-lg: 1.5rem;

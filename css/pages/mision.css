@@ -1,4 +1,11 @@
-/* Página de misión: guía de entrenamiento */
+/*
+ * Página de misión: tres paneles a pantalla completa (100vh).
+ * Cada panel tiene una imagen de fondo con position: absolute
+ * y un overlay con gradiente lateral (izquierda o derecha)
+ * que oscurece el lado donde se coloca el texto.
+ * En móvil, el gradiente cambia a vertical (de abajo hacia arriba)
+ * y el texto se alinea al fondo del panel.
+ */
 .mission {
   padding-top: 0;
 }

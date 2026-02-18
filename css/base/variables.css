@@ -1,3 +1,10 @@
+/*
+ * Sistema de diseño: todas las propiedades visuales se definen
+ * como custom properties para mantener coherencia en el proyecto.
+ * Al cambiar un valor aquí, se propaga automáticamente a toda la web.
+ * Los breakpoints en responsive.css sobrescriben algunas de estas
+ * variables para adaptar el espaciado a cada tamaño de pantalla.
+ */
 :root {
   /* Colores de fondo */
   --color-bg-primary: #08080c;

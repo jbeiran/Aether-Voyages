@@ -1,4 +1,14 @@
 <!doctype html>
+<!--
+  ENLACE DE REFERENCIA 
+  https://www.siteinspire.com/websites/12771-studio-thames
+
+  El diseño de Aether Voyages se inspira en el ejemplo anterior.
+  La web recrea una estética de lujo minimalista aplicada al
+  turismo aeroespacial, manteniendo tipografía serif grande,
+  paleta oscura con acentos dorados y composiciones visuales
+  de pantalla completa.
+-->
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -29,7 +39,11 @@
   </head>
 
   <body>
-    <!-- HEADER -->
+    <!--
+      HEADER: barra de navegación fija (position: fixed).
+      El menú hamburguesa funciona sin JS: un checkbox oculto
+      controla la visibilidad del nav__menu mediante el selector ~
+    -->
     <header class="header" id="header">
       <nav class="nav">
         <a href="index.html" class="logo">
@@ -59,7 +73,9 @@
     </header>
 
     <main>
-      <!-- HERO SECTION  -->
+      <!-- HERO: sección a pantalla completa con vídeo de fondo.
+           El vídeo se posiciona absolute detrás del contenido y un
+           overlay con gradiente oscurece la imagen para legibilidad. -->
       <section class="hero" id="hero">
         <div class="hero__video-container">
           <video class="hero__video" autoplay muted loop>
@@ -97,7 +113,12 @@
         </div>
       </section>
 
-      <!-- SLIDESHOW DE NAVES -->
+      <!--
+        SLIDESHOW DE NAVES — Carrusel solo con HTML y CSS.
+        Funciona con inputs radio ocultos: al seleccionar un radio,
+        el selector CSS ~  desplaza el .slideshow__track con translateX.
+        Los labels actúan como botones de navegación.
+      -->
       <section class="slideshow" id="flota">
         <header class="section-header slideshow__header">
           <p class="section-label">Nuestra Flota</p>
@@ -286,6 +307,18 @@
               <a href="pages/mision.html" class="footer__link">Preparación</a>
             </li>
             <li><a href="pages/blog.html" class="footer__link">Noticias</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__nav">
+          <h4 class="footer__title">Recursos</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="https://www.nasa.gov" target="_blank" rel="noopener noreferrer" class="footer__link">NASA</a>
+            </li>
+            <li>
+              <a href="https://www.esa.int" target="_blank" rel="noopener noreferrer" class="footer__link">ESA</a>
+            </li>
           </ul>
         </nav>
       </div>
