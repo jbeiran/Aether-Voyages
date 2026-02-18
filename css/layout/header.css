@@ -29,8 +29,7 @@
 }
 
 .header--solid {
-  background: rgba(8, 8, 12, 0.95);
-  backdrop-filter: blur(20px);
+  background: var(--color-bg-primary);
 }
 
 .nav {
