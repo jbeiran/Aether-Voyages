@@ -80,9 +80,19 @@
             muestra con :hover. Los elementos internos del overlay
             aparecen con animación escalonada usando transition-delay.
           -->
+          <!-- Barra de filtros con contador -->
+          <div class="destinations__filters">
+            <div class="filter-bar">
+              <button class="filter-btn filter-btn--active" data-filter="todos">Todos</button>
+              <button class="filter-btn" data-filter="real">Sistema Solar</button>
+              <button class="filter-btn" data-filter="ficcion">Colonias Aether</button>
+            </div>
+            <p class="destinations__count">12 todos los destinos</p>
+          </div>
+
           <div class="destinations__grid">
             <!-- Marte -->
-            <article class="dest-card">
+            <article class="dest-card" data-category="real">
               <div class="dest-card__image">
                 <img
                   src="../assets/images/planetas/marte.png"
@@ -112,7 +122,7 @@
             </article>
 
             <!-- Júpiter -->
-            <article class="dest-card">
+            <article class="dest-card" data-category="real">
               <div class="dest-card__image">
                 <img
                   src="../assets/images/planetas/jupiter.png"
@@ -142,7 +152,7 @@
             </article>
 
             <!-- Saturno -->
-            <article class="dest-card">
+            <article class="dest-card" data-category="real">
               <div class="dest-card__image">
                 <img
                   src="../assets/images/planetas/saturno.png"
@@ -172,7 +182,7 @@
             </article>
 
             <!-- Luna -->
-            <article class="dest-card">
+            <article class="dest-card" data-category="real">
               <div class="dest-card__image">
                 <img
                   src="../assets/images/planetas/luna.png"
@@ -202,7 +212,7 @@
             </article>
 
             <!-- Titán -->
-            <article class="dest-card">
+            <article class="dest-card" data-category="real">
               <div class="dest-card__image">
                 <img
                   src="../assets/images/planetas/titan.png"
@@ -232,7 +242,7 @@
             </article>
 
             <!-- Cosmos -->
-            <article class="dest-card">
+            <article class="dest-card" data-category="ficcion">
               <div class="dest-card__image">
                 <img
                   src="../assets/images/planetas/cosmos.png"
@@ -262,7 +272,7 @@
             </article>
 
             <!-- Pomona -->
-            <article class="dest-card">
+            <article class="dest-card" data-category="ficcion">
               <div class="dest-card__image">
                 <img
                   src="../assets/images/planetas/pomona.png"
@@ -292,7 +302,7 @@
             </article>
 
             <!-- Evera -->
-            <article class="dest-card">
+            <article class="dest-card" data-category="ficcion">
               <div class="dest-card__image">
                 <img
                   src="../assets/images/planetas/evera.png"
@@ -322,7 +332,7 @@
             </article>
 
             <!-- Margon -->
-            <article class="dest-card">
+            <article class="dest-card" data-category="ficcion">
               <div class="dest-card__image">
                 <img
                   src="../assets/images/planetas/margon.png"
@@ -352,7 +362,7 @@
             </article>
 
             <!-- Gratus -->
-            <article class="dest-card">
+            <article class="dest-card" data-category="ficcion">
               <div class="dest-card__image">
                 <img
                   src="../assets/images/planetas/gratus.png"
@@ -382,7 +392,7 @@
             </article>
 
             <!-- Arnida -->
-            <article class="dest-card">
+            <article class="dest-card" data-category="ficcion">
               <div class="dest-card__image">
                 <img
                   src="../assets/images/planetas/arnida.png"
@@ -412,7 +422,7 @@
             </article>
 
             <!-- Velerino -->
-            <article class="dest-card">
+            <article class="dest-card" data-category="ficcion">
               <div class="dest-card__image">
                 <img
                   src="../assets/images/planetas/velerino.png"
@@ -497,5 +507,6 @@
         </ul>
       </div>
     </footer>
+    <script src="../js/destinos.js"></script>
   </body>
 </html>

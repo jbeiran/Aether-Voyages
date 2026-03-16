@@ -76,7 +76,40 @@
             <!-- FORMULARIO de reserva: incluye campos de texto, email,
                  select, radio buttons, checkbox y botón de envío.
                  Los inputs usan accent-color para los controles nativos. -->
-            <form class="booking__form" action="#" method="POST">
+            <!-- Confirmación (oculta hasta que se envíe el formulario) -->
+            <div class="booking__confirmation" id="confirmacion" style="display: none">
+              <h2 class="confirmation__title">Reserva Recibida</h2>
+              <p class="confirmation__text" id="confirmacion-texto"></p>
+              <div class="confirmation__countdown">
+                <p class="countdown__label">Próxima ventana de lanzamiento</p>
+                <div class="countdown__timer">
+                  <div class="countdown__block">
+                    <span class="countdown__number" id="cd-dias">--</span>
+                    <span class="countdown__unit">Días</span>
+                  </div>
+                  <span class="countdown__separator">:</span>
+                  <div class="countdown__block">
+                    <span class="countdown__number" id="cd-horas">--</span>
+                    <span class="countdown__unit">Horas</span>
+                  </div>
+                  <span class="countdown__separator">:</span>
+                  <div class="countdown__block">
+                    <span class="countdown__number" id="cd-min">--</span>
+                    <span class="countdown__unit">Min</span>
+                  </div>
+                  <span class="countdown__separator">:</span>
+                  <div class="countdown__block">
+                    <span class="countdown__number" id="cd-seg">--</span>
+                    <span class="countdown__unit">Seg</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn--outline-accent" id="btn-nueva-reserva" type="button">
+                Nueva Reserva
+              </button>
+            </div>
+
+            <form class="booking__form" id="formReserva" action="#" method="POST">
               <div class="form-group">
                 <label for="nombre" class="form-group__label"
                   >Nombre completo</label
@@ -89,6 +122,7 @@
                   placeholder="Tu nombre completo"
                   required
                 />
+                <span class="form-message" id="error-nombre"></span>
               </div>
 
               <div class="form-group">
@@ -103,6 +137,7 @@
                   placeholder="tu@email.com"
                   required
                 />
+                <span class="form-message" id="error-email"></span>
               </div>
 
               <div class="form-group">
@@ -123,6 +158,7 @@
                   <option value="luna">Luna - Mare Tranquillitatis</option>
                   <option value="marte">Marte - Olympus Base</option>
                 </select>
+                <span class="form-message" id="error-destino"></span>
               </div>
 
               <div class="form-group form-group--row">
@@ -137,6 +173,7 @@
                     class="form-group__input"
                     required
                   />
+                  <span class="form-message" id="error-fecha"></span>
                 </div>
                 <div class="form-group__half">
                   <label for="fecha-vuelta" class="form-group__label"
@@ -197,6 +234,7 @@
                     del viaje espacial
                   </span>
                 </label>
+                <span class="form-message" id="error-terminos"></span>
               </div>
 
               <button
@@ -278,5 +316,6 @@
         </ul>
       </div>
     </footer>
+    <script src="../js/contacto.js"></script>
   </body>
 </html>

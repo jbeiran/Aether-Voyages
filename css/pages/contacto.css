@@ -173,6 +173,100 @@
   filter: invert(0.9) hue-rotate(180deg) saturate(0.3) brightness(0.6);
 }
 
+/* Mensajes de error en formulario */
+.form-message {
+  font-size: 0.7rem;
+  margin-top: 2px;
+}
+
+/* Confirmación de reserva */
+.booking__confirmation {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.confirmation__title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.confirmation__text {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+}
+
+.confirmation__text strong {
+  color: var(--color-accent);
+}
+
+/* Countdown */
+.confirmation__countdown {
+  margin-bottom: var(--space-xl);
+}
+
+.countdown__label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.countdown__timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.countdown__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+}
+
+.countdown__number {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.countdown__unit {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+}
+
+.countdown__separator {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: 1.2rem;
+}
+
+.booking__back-btn {
+  margin-top: var(--space-sm);
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
   .booking {
@@ -214,5 +308,13 @@
 
   .booking__map-container {
     height: 300px;
+  }
+
+  .countdown__block {
+    min-width: 48px;
+  }
+
+  .booking__confirmation {
+    padding: var(--space-lg);
   }
 }
