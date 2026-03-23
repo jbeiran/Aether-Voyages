@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="feed.xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aether Voyages | Noticias y novedades</title>
     <atom:link
-      href="https://example.com/feed.xml"
+      href="http://127.0.0.1:5500/feed.xml"
       rel="self"
       type="application/rss+xml"
     />
-    <link>https://example.com/index.html</link>
+    <link>http://127.0.0.1:5500/index.html</link>
     <description>
       Sindicación de contenidos RSS 2.0: novedades de flota, blog y misiones de Aether Voyages.
     </description>
-    <image>
-      <url>https://example.com/assets/images/naves/nova-100.png</url>
-      <title>Aether Voyages — Nova-100</title>
-      <link>https://example.com/index.html</link>
-    </image>
     <language>es-es</language>
     <lastBuildDate>Mon, 23 Mar 2026 12:00:00 +0100</lastBuildDate>
     <pubDate>Mon, 23 Mar 2026 12:00:00 +0100</pubDate>
@@ -24,14 +20,14 @@
 
     <item>
       <title>Nueva unidad Nova-100 en la flota</title>
-      <link>https://example.com/pages/naves.html#nova-100</link>
+      <link>http://127.0.0.1:5500/pages/naves.html#nova-100</link>
       <description>
-        <![CDATA[<p>Ampliamos la familia Nova con la <strong>Nova-100</strong>, pensada para trayectos regionales en órbita baja con mayor eficiencia.</p><p><img src="https://example.com/assets/images/naves/nova-100.png" alt="Vista de la nave Nova-100" width="560" /></p>]]>
+        <![CDATA[<p>Ampliamos la familia Nova con la <strong>Nova-100</strong>, pensada para trayectos regionales en órbita baja con mayor eficiencia.</p><p><img src="http://127.0.0.1:5500/assets/images/naves/nova-100.png" alt="Vista de la nave Nova-100" width="560" /></p>]]>
       </description>
       <pubDate>Mon, 23 Mar 2026 10:00:00 +0100</pubDate>
       <guid isPermaLink="false">aether-2026-03-23-nova-100</guid>
       <enclosure
-        url="https://example.com/assets/images/naves/nova-100.png"
+        url="http://127.0.0.1:5500/assets/images/naves/nova-100.png"
         type="image/png"
         length="177070"
       />
@@ -39,14 +35,14 @@
 
     <item>
       <title>Referencia visual: Nova-100 en el blog</title>
-      <link>https://example.com/pages/blog.html#referencia-visual-nova-100</link>
+      <link>http://127.0.0.1:5500/pages/blog.html#referencia-visual-nova-100</link>
       <description>
-        <![CDATA[<p>La <strong>Nova-100</strong> entra en el material gráfico del blog: piezas de exploración y divulgación que acompañan las novedades de flota.</p><p><img src="https://example.com/assets/images/naves/nova-100.png" alt="Nave Nova-100 en órbita" width="560" /></p>]]>
+        <![CDATA[<p>La <strong>Nova-100</strong> entra en el material gráfico del blog: piezas de exploración y divulgación que acompañan las novedades de flota.</p><p><img src="http://127.0.0.1:5500/assets/images/naves/nova-100.png" alt="Nave Nova-100 en órbita" width="560" /></p>]]>
       </description>
       <pubDate>Fri, 20 Mar 2026 09:30:00 +0100</pubDate>
       <guid isPermaLink="false">aether-2026-03-20-blog-nova100</guid>
       <enclosure
-        url="https://example.com/assets/images/naves/nova-100.png"
+        url="http://127.0.0.1:5500/assets/images/naves/nova-100.png"
         type="image/png"
         length="177070"
       />
