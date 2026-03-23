@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="feed.xsl"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss
+  version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xml:base="http://127.0.0.1:5500/"
+>
   <channel>
     <title>Aether Voyages | Noticias y novedades</title>
     <atom:link
-      href="http://127.0.0.1:5500/feed.xml"
+      href="feed.xml"
       rel="self"
       type="application/rss+xml"
     />

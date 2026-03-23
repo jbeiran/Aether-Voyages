@@ -74,7 +74,7 @@
         <p class="muted">
           <xsl:value-of select="description" />
         </p>
-        <p class="muted">Vista legible del RSS (XSLT). Los lectores RSS usan el XML directamente.</p>
+        <p class="muted">Vista legible del canal RSS.</p>
 
         <ul class="links">
           <li>
@@ -89,13 +89,6 @@
             <xsl:text> </xsl:text>
             <a href="{atom:link[@rel='self']/@href}">
               <xsl:value-of select="atom:link[@rel='self']/@href" />
-            </a>
-          </li>
-          <li>
-            <strong>Imagen del canal:</strong>
-            <xsl:text> </xsl:text>
-            <a href="{image/url}">
-              <xsl:value-of select="image/url" />
             </a>
           </li>
           <li>
