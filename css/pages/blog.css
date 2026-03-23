@@ -42,6 +42,11 @@
   align-items: start;
 }
 
+.blog__feed-entry {
+  margin-bottom: var(--space-lg);
+  scroll-margin-top: 6rem;
+}
+
 .blog__featured {
   display: grid;
   grid-template-columns: 1fr 1fr;

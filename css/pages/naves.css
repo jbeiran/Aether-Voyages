@@ -333,3 +333,7 @@
     margin-right: var(--space-sm);
   }
 }
+
+#nova-100 {
+  scroll-margin-top: 6rem;
+}
