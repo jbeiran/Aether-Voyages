@@ -17,10 +17,25 @@
       Sindicación de contenidos RSS 2.0: novedades de flota, blog y misiones de Aether Voyages.
     </description>
     <language>es-es</language>
-    <lastBuildDate>Mon, 23 Mar 2026 12:00:00 +0100</lastBuildDate>
-    <pubDate>Mon, 23 Mar 2026 12:00:00 +0100</pubDate>
+    <lastBuildDate>Mon, 23 Mar 2026 13:00:00 +0100</lastBuildDate>
+    <pubDate>Mon, 23 Mar 2026 13:00:00 +0100</pubDate>
     <ttl>60</ttl>
     <docs>https://www.rssboard.org/rss-specification</docs>
+
+    <item>
+      <title>Blog: acceso al feed RSS corregido en la barra lateral</title>
+      <link>http://127.0.0.1:5500/pages/blog.html#canal-rss-blog</link>
+      <description>
+        <![CDATA[<p>Actualizamos el bloque <strong>Canal RSS</strong> del blog: enlace claro a <code>feed.xml</code> (texto <strong>Feed RSS</strong>) para suscribirse sin el enlace confuso anterior.</p><p><img src="http://127.0.0.1:5500/assets/icons/favicon.ico" alt="Icono Aether Voyages — acceso al feed" width="64" height="64" /></p>]]>
+      </description>
+      <pubDate>Mon, 23 Mar 2026 13:00:00 +0100</pubDate>
+      <guid isPermaLink="false">aether-2026-03-23-blog-rss-enlace</guid>
+      <enclosure
+        url="http://127.0.0.1:5500/assets/icons/favicon.ico"
+        type="image/x-icon"
+        length="15406"
+      />
+    </item>
 
     <item>
       <title>Nueva unidad Nova-100 en la flota</title>

@@ -140,6 +140,10 @@
   padding: var(--space-md) var(--space-md) var(--space-sm);
 }
 
+#canal-rss-blog {
+  scroll-margin-top: 6rem;
+}
+
 .sidebar-widget__title {
   font-family: var(--font-body);
   font-size: 0.75rem;
